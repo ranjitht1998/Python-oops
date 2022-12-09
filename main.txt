@@ -1,0 +1,164 @@
+Q1. What is the purpose of Python's OOP?
+
+In Python, object-oriented Programming (OOPs) is a programming paradigm that uses objects and classes in programming.
+It aims to implement real-world entities like inheritance, polymorphisms, encapsulation .
+
+Q2. Where does an inheritance search look for an attribute?
+
+An inheritance search looks for an attribute first in the instance object, then in the class the instance was created from, then in all higher superclasses, progressing from left to right.
+
+Q3. How do you distinguish between a class object and an instance object?
+The class = the blue print. The Object is an actual thing that is built based on the 'blue print' of a class.
+An instance is a virtual copy (but not a real copy) of the object.
+
+Q4. What makes the first argument in a class’s method function special?
+
+The calling process is automatic while the receiving process is not (its explicit).
+This is the reason the first parameter of a function in class must be the object itself. Writing this parameter as self is merely a convention.
+
+Q5. What is the purpose of the init method?
+
+The __init__ method lets the class initialize the object's attributes .
+Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created .
+
+Q6. What is the process for creating a class instance?
+
+To create instances of a class, you call the class using class name and pass in whatever arguments its __init__ method accepts .
+
+Q7. What is the process for creating a class?
+
+In Python, a class can be created by using the keyword class, followed by the class name.
+
+Q8. How would you define the superclasses of a class?
+
+A superclass is the class from which many subclasses can be created. The subclasses inherit the characteristics of a superclass.
+Class keyword followed by a class name function would create a super class .
+
+Q9. What is the relationship between classes and modules?
+
+Modules are collections of methods and constants. They cannot generate instances.
+Classes may generate instances (objects), and have per-instance state (instance variables).
+Modules contains classes which can be used .
+
+Q10. How do you make instances and classes?
+
+Classes can be made by class keyword followed by classnames.
+To create instances of a class, you call the class using class name and pass in whatever arguments its __init__ method accepts.
+
+Q11. Where and how should be class attributes created?
+
+To define a class attribute, you place it outside of the __init__() method.
+Use class_name, class_attribute  to access the value of the class_attribute
+
+Q12. Where and how are instance attributes created?
+
+Instance attributes are defined in the __init__() function .
+In the __init__ function  self followed by the attribute they are instances attributes are created .
+
+Q13. What does the term "self" in a Python class mean?
+
+The self parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class .
+
+Q14. How does a Python class handle operator overloading?
+
+Python operators work for built-in classes. But the same operator behaves differently with different types. 
+For example, the + operator will perform arithmetic addition on two numbers, merge two lists, or concatenate two strings.
+
+Q15. When do you consider allowing operator overloading of your classes?
+
+It allows for reusability; instead of developing numerous methods with minor differences, we can simply write one method and overload it. 
+It also increases code clarity and reduces complexity .
+
+Q16. What is the most popular form of operator overloading?
+
+A very popular and convenient example is the Addition (+) operator. Just think how the '+' operator operates on two numbers and the same operator operates on two strings.
+
+Q17. What are the two most important concepts to grasp in order to comprehend Python OOP code?
+
+Polymorphism and encapsulation are important concepts to grasp in order to comprehend Python OOP code .
+
+Q18. Describe three applications for exception processing.
+
+1. Doesnt disrupts the normal flow of the program's
+2. Handle unwanted or unexpected events
+3. Avoid the program or system crashing
+
+Q19. What happens if you don't do something extra to treat an exception?
+
+If you don't handle an exception, it will propagate up the call stack up to the interpreter, which will then display a traceback and exit or disrupts the normal flow of the program.
+
+Q20. What are your options for recovering from an exception in your script?
+
+A generic except clause, which handles any exception. After the except clause(s), we can include an else-clause.
+
+Q21. Describe two methods for triggering exceptions in your script.
+
+Try – This method catches the exceptions raised by the program. Raise – Triggers an exception manually using custom exceptions.
+
+Q22. Identify two methods for specifying actions to be executed at termination time, regardless of
+whether or not an exception exists.
+
+Finally block always executes irrespective of an exception being thrown or not. The final keyword allows you to create a block of code that follows a try-catch block .
+
+Q23. What is the purpose of the try statement?
+
+The try block lets you test a block of code for errors or exceptions.
+
+Q24. What are the two most popular try statement variations?
+
+try / except and even a try / except / except are popular variations. 
+
+Q25. What is the purpose of the raise statement?
+
+The raise keyword is used to raise an exception. You can define what kind of error to raise, and the text to print to the user.
+
+Q26. What does the assert statement do, and what other statement is it like?
+
+The assert keyword is used when debugging code. The assert keyword lets you test if a condition in your code returns True, if not, the program will raise an AssertionError.
+
+Q27. What is the purpose of the with/as argument, and what other statement is it like?
+
+In Python, with statement is used in exception handling to make the code cleaner and much more readable. It simplifies the management of common resources like file streams.
+
+Q28. What are *args, **kwargs?
+
+You can use *args and **kwargs as arguments of a function when you are unsure about the number of arguments to pass in the functions.
+*args allows us to pass a variable number of non-keyword arguments to a Python function
+**kwargs allows us to pass a variable number of keyword arguments to a Python function.
+
+Q29. How can I pass optional or keyword parameters from one function to another?
+
+Q30. What are Lambda Functions?
+
+Python Lambda Functions are anonymous function means that the function is without a name .
+It can take any number of arguments but, unlike normal functions, evaluates and returns only one expression.
+
+Q31. Explain Inheritance in Python with an example?
+
+Inheritance relationship defines the classes that inherit from other classes as derived, subclass, or sub-type classes.
+class Person():
+    def __init__(self, name):
+        self.name = name 
+
+    def displayName(self):
+        print(self.name) 
+
+    # By default we can say that particular perosn is unemployed
+    def isEmployed(self):
+        print(self.name," is Un-Employed !!")
+
+# Derived Class aka Child Class
+class Employee(Person):
+
+    def isEmployed(self):
+        print(self.name," is Employed !!")
+
+
+emp = Person('Ranjith')
+emp.displayName()
+emp.isEmployed()
+
+Q32. Suppose class C inherits from classes A and B as class C(A,B).Classes A and B both have their own versions of method func(). If we call func() from an object of class C, which version gets invoked?
+
+
+
