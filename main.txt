@@ -158,7 +158,15 @@ emp = Person('Ranjith')
 emp.displayName()
 emp.isEmployed()
 
-Q32. Suppose class C inherits from classes A and B as class C(A,B).Classes A and B both have their own versions of method func(). If we call func() from an object of class C, which version gets invoked?
+Q33. Which methods/functions do we use to determine the type of instance and inheritance?
 
+isinstance()  methods/functions is used to determine the type of instance and inheritance .
 
+Q34.Explain the use of the 'nonlocal' keyword in Python.
 
+The nonlocal keyword is used to work with variables inside nested functions, where the variable should not belong to the inner function.
+Use the keyword nonlocal to declare that the variable is not local.
+
+Q35. What is the global keyword?
+
+The global keyword allows us to modify the variable outside of the current scope. It is used to create a global variable and make changes to the variable in a local context.
